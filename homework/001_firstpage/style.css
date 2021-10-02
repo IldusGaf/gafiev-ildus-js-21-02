@@ -10,7 +10,8 @@ header {
 header h1 {
 	margin:0px;
 	padding:14px;
-	color: white;}
+	color: white;
+}
 #sidebar {
 	background-color: rgb(242,242,242);
 	float:left;
@@ -62,9 +63,11 @@ footer {
 }	
 footer p {
 	float:right;
-	color:#666666;;
+	color:#666666;
 	margin: 0px 20px;
 }
 .info {
 	float:left;
+	text-decoration: none;
+	color:#666666;
 }
