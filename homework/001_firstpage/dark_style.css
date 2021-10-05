@@ -1,0 +1,33 @@
+.header_theme_dark {
+    background: black;
+}
+.theme_dark {
+	background: #3a3a3c;
+	color: white;
+}
+.body_theme_dark {
+    background: #666666;
+	color: white;
+}
+.category-item__block_theme_dark {
+	background: #3a3a3c;
+	color: coral;
+}
+.category-item__link-theme_dark {
+	color:red;
+}
+.product-list__caption-link-theme_dark {
+	color:red;
+}
+.product-list__caption-button-theme_dark {
+	background-color: black;
+	color: white;
+}
+.footer_theme_dark {
+    background: black;
+	color: coral;
+}
+.footer__link_theme_dark {
+	text-decoration: none;
+	color:red;
+}

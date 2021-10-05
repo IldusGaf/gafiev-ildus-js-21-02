@@ -1,73 +1,86 @@
-header, div, footer  {
+div, footer, .sidebar   {
 	background-color: rgb(242,242,242);
 }
 body {
 	font-family: Arial, Verdana, sans-serif;
+	display:grid;
+	grid-template-rows: auto 1fr 30px;
+	grid-template-columns: 240px 1fr;
+	grid-gap: 20px;
 }
 header {
+	grid-column: span 3;
 	background-color: rgb(0,154,88);
 }
 header h1 {
 	margin:0px;
-	padding:14px;
+	padding:10px;
 	color: white;
 }
-#sidebar {
-	background-color: rgb(242,242,242);
-	float:left;
-	width:300px;
-	height:100%;
-	margin:0px 20px 0px 0px;
-}
-.fishtypes {
+.filter-item {
 	margin-left:10px;
-}
-.category {
-	margin-right:20px;
-	padding:20px;
-}
-main {
-	margin: 20px 0px ;
-	height:890px;
-}
-div {
-	display:inline-block;
-	vertical-align: middle;
-}	
-figure {
-	float:left;
-	width:150px;
-	padding:5px;
-	margin:0px 20px 0px 0px;}
-img {
-	width:150px;
-	height:150px;
-}
-.product{
-	height:160px;
-	width:250px;
-	margin:0px 20px 20px 0px;
-}
-input {
-	margin-right: 10px;
 }
 ul {
 	list-style-type:none;
 	padding:0px 0px 0px 20px;
 	margin: 0px;
 }
-footer {
-	clear: both;
-	overflow: hidden;
-	padding: 7px 0px 0px 0px;
-}	
-footer p {
-	float:right;
+.category-item {
+	display:flex;
+	flex-wrap: wrap;
+}
+.category-item__block {
+	margin: 10px 10px 0px 0px;
+	padding: 10px;
+}
+.product-list {
+    display: flex;
+	flex-wrap: wrap;
+}
+.product-list__block{
+	display: flex;
+	height:110px;
+	width:240px;
+	padding: 5px;
+	margin:0px 10px 10px 0px;
+}
+figure {
+	margin:0px 10px 0px 0px;}
+img {
+	width:110px;
+	height:110px;
+}
+.product-list__caption {
+    background-color: rgba(242,242,242, 0);
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+.product-list__caption-button {
+	padding: 5px;
+    background-color: #cccccc;
+    border: none;
+    outline: none;
+}
+input {
+	margin-right: 10px;
+}
+.footer {
+	grid-column: span 3;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
 	color:#666666;
+}
+.footer p {
 	margin: 0px 20px;
 }
-.info {
-	float:left;
+.footer__link {
 	text-decoration: none;
-	color:#666666;
+	color: #666666;
+}
+@media (max-width: 520px) {
+	.sidebar {
+		display: none;
+	}
 }
