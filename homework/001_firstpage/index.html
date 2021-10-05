@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="widht=device-widht,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="Stylesheet" type="text/css" href="dark_style.css">
+    <title>Первое ДЗ</title>
+</head>
+<body>
+<header class="header">
+    <h1>Интернет-магазин "Не только красивое"</h1>
+    <label class="theme-change"><input type="checkbox" class="theme-change__changer"> Темная тема</label>
+</header>
+<section class="sidebar">
+    <article class="filter-item">
+        <h3 class="filter-item__header">Морская рыба</h3>
+        <ul class="filter-item__list">
+            <li><label><input type="checkbox" name="seafish" value="1">Акула</label></li>
+            <li><label><input type="checkbox" name="seafish" value="1">Окунь</label></li>
+            <li><label><input type="checkbox" name="seafish" value="1">Палтус</label></li>
+            <li><label><input type="checkbox" name="seafish" value="1">Треска</label></li>
+        </ul>
+    </article>
+    <article class="filter-item">
+        <h3 class="filter-item__header">Пресноводная рыба</h3>
+        <ul class="filter-item__list">
+            <li><label><input type="checkbox" name="freshwaterfish" value="1">Белоглазка</label></li>
+            <li><label><input type="checkbox" name="freshwaterfish" value="1">Осетр</label></li>
+            <li><label><input type="checkbox" name="freshwaterfish" value="1">Речной угорь</label></li>
+            <li><label><input type="checkbox" name="freshwaterfish" value="1">Налим</label></li>
+        </ul>
+    </article>
+</section>
+<main id="allcontent">
+    <article class="сontent">
+        <h2>Рыбы на любой вкус</h2>
+        <p>Мы продаем рыбы, а не только показываем!</p>
+        <section class="category-item">
+            <div class="category-item__block">
+                <a href="#" class="category-item__link">Замороженные рыбы</a>
+                <p class="category-item__p">Мы заморозили рыбы для вас</p>
+            </div>
+            <div class="category-item__block">
+                <a href="#" class="category-item__link">Живые рыбы</a>
+                <p class="category-item__p">На кухню или на разведение</p>
+            </div>
+        </section>
+        <h3>Популярные</h3>
+        <section class="product-list">
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Палтус</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Сёмга</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Сом</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Мойва</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Сельдь</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+            <div class="product-list__block">
+                <figure class="product-list__pic">
+                    <img src="images/image.jpg" alt="Bok Choy"/>
+                </figure>
+                <div class="product-list__caption">
+                    <a href="#" class="product-list__caption-link">Тунец</a>
+                    <input class="product-list__caption-button" type="submit" name="buy" value="Купить"/>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+<footer class="footer">
+    <p><a class="footer__link" href="#">Контакты</a></p>
+    <p>&copy; 2021 ИП Рыбов О.А.</p>
+</footer>
+<script src="change_style.js"></script>
+</body>
+</html>
