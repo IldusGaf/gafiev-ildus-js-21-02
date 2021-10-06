@@ -1,4 +1,4 @@
-header, div, footer, .sidebar   {
+div, footer, .sidebar   {
 	background-color: rgb(242,242,242);
 }
 body {
@@ -9,6 +9,10 @@ body {
 	grid-gap: 20px;
 }
 header {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
 	grid-column: span 3;
 	background-color: rgb(0,154,88);
 }
@@ -17,8 +21,27 @@ header h1 {
 	padding:10px;
 	color: white;
 }
+.loader {
+    background-color: rgba(0,154,88, 0);
+    width:30px;
+    height:30px;
+    border: 10px solid rgba(154,222, 74, 0.6);
+    border-radius: 50%;
+    border-left-color: rgb(0,154,88);
+    animation: loader 1s linear infinite;
+}
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .filter-item {
 	margin-left:10px;
+}
+ul {
+	list-style-type:none;
+	padding:0px 0px 0px 20px;
+	margin: 0px;
 }
 .category-item {
 	display:flex;
@@ -27,20 +50,6 @@ header h1 {
 .category-item__block {
 	margin: 10px 10px 0px 0px;
 	padding: 10px;
-}
-main {
-}
-
-.product-list__caption {
-	display:flex;
-	flex-direction:column;
-	justify-content:space-around;
-}
-figure {
-	margin:0px 10px 0px 0px;}
-img {
-	width:110px;
-	height:110px;
 }
 .product-list {
     display: flex;
@@ -53,13 +62,37 @@ img {
 	padding: 5px;
 	margin:0px 10px 10px 0px;
 }
+.product-list__block:hover {
+    animation: changeColor 1s forwards;
+}
+@keyframes changeColor {
+    0% {
+        background-color: rgb(242,242,242);
+    }
+    100% {
+        background-color: rgb(0,154,88);
+    }
+}
+figure {
+	margin:0px 10px 0px 0px;}
+img {
+	width:110px;
+	height:110px;
+}
+.product-list__caption {
+    background-color: rgba(242,242,242, 0);
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+.product-list__caption-button {
+	padding: 5px;
+    background-color: #cccccc;
+    border: none;
+    outline: none;
+}
 input {
 	margin-right: 10px;
-}
-ul {
-	list-style-type:none;
-	padding:0px 0px 0px 20px;
-	margin: 0px;
 }
 .footer {
 	grid-column: span 3;
@@ -70,12 +103,6 @@ ul {
 }
 .footer p {
 	margin: 0px 20px;
-}
-.product-list__caption-button {
-	padding: 5px;
-    background-color: #cccccc;
-    border: none;
-    outline: none;
 }
 .footer__link {
 	text-decoration: none;
