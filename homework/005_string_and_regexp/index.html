@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ №5</title>
+</head>
+<body>
+    <script>
+	// 1 задание
+	/*
+		let str = prompt('Напишите строку и подстроку для поиска через запятую', 'Ну что говоришь мне:"Привет брат",Привет брат');
+		let arrayOfStr = str.split(',');
+		let regexp = new RegExp (`${arrayOfStr[1]}`, 'i');
+		alert(regexp.test(arrayOfStr[0]));
+	*/
+	// 2 задание
+	/*
+		let str = prompt('Напишите строку?', 'Ну что говоришь мне:"Привет брат"');
+		let lengthStr = prompt('Напишите кол-во символов?', 6);
+		alert(str.slice(0, lengthStr) + '...');
+	*/
+	// 3 задание
+	/*
+		let str = '12/02/2021 12-00';
+		alert( str.replace(/\//g, ".").replace(/\-/g, ":"))
+	*/
+	// 4 задание
+	/*
+		let regexp = /^[А-Яа-я]+\s[А-Яа-я]+(\s[А-Яа-я]+(вич|вна))?$/;
+		let str = prompt('Напишите ФИО? Вводить через пробел', 'Иванов Иван');
+		alert(regexp.test(str));
+	*/
+	// 5 задание
+	/*
+		var s = 'PamalCase DssCase';
+		alert(s.replace(/\s?([A-Z+])/g, function (x,y){return "_" + y.toLowerCase()}).replace(/^_/, ""));
+	*/
+	// 6 задание
+	/*
+	let str = ` dfdgdfg<!--Текст
+		комментария--> dfdgdfgdfgdfg`;
+	alert(str.match(/<!--(.+?)-->/gs));
+	*/
+	// 7 задание
+	/*
+	let str = prompt('Напишите цифры?', '0 1 12.345 7890');
+	alert( str.match(/\d+(\.\d+)?/g));
+	*/
+	// 8 задание
+
+	let regexp = /(([0-9A-Z]{4})-?){4}/i;
+	inputStr ();
+	function inputStr () {
+		let str = prompt('Напишите цифры?', '1231-1231-34~-1324');
+		if (str == null) {
+			return
+		} else {
+			checkId(regexp, str);
+		}
+	}
+	function checkId(regexp, str) {
+		if (regexp.test(str)) {
+			alert ('ведётся поиск');
+		} else {
+			alert ('неверный илентификатор');
+			inputStr ();
+		};
+	}
+	</script>
+</body>
+</html>
