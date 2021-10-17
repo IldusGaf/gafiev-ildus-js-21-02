@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ №7</title>
+</head>
+<body>
+    <script>
+	// 1 задание
+	/*
+	const pet = {
+		nickname: '',
+		eat() {
+		 console.log(`${this.nickname} ест`);
+		},
+		say() {
+			console.log('Неизвестное животное молчит');
+		},
+		rename(nickname) {
+                const regexp = /^[А-Я]([а-яА-Я]|-| )+$/g;
+                if ( regexp.test(nickname) ) {
+                    this.nickname = nickname;
+                } else {
+                    console.log('Новая кличка должна содержать только кирилические символы, пробелы или символ "-".');
+                }
+        }
+	}
+
+	const cat = {
+		__proto__: pet,
+		nickname:'Котяра',
+		say() {
+			console.log(`Кот ${this.nickname} молчит`);
+		},
+		hunt() {
+			console.log(`Кот ${this.nickname} охотится`);
+		},
+	}
+
+	const dog = {
+		__proto__: pet,
+		nickname:'Кекс',
+		say() {
+			console.log(`Собака ${this.nickname} молчит`);
+		},
+	}
+	const parrot = {
+		__proto__: pet,
+		nickname:'Кеша',
+		say() {
+			console.log(`Попугай ${this.nickname} молчит`);
+		},
+	}
+	function setDefineProperty(obj) {
+		for (let key in obj) {
+			if ((typeof obj[key])=="function") {
+				Object.defineProperty(obj, key, {
+					enumerable: false,
+					configurable: false,
+					writable: false
+				});
+			}
+			Object.defineProperty(obj, key, {
+				configurable: false,
+			})
+		}
+	}
+	setDefineProperty(pet);
+	setDefineProperty(cat);
+	setDefineProperty(dog);
+	setDefineProperty(parrot);
+	cat.eat();
+	cat.hunt();
+	cat.say();
+	dog.eat();
+	dog.say();
+	parrot.eat();
+	parrot.say();
+	parrot.rename("Герундий");
+	parrot.rename("Gерундий");
+	parrot.say();
+	*/
+	// Реализация с помощью конструкторов
+	/*
+	function Pet(nickname) {
+		this.nickname = nickname;
+		this.eat = function() {
+		 console.log(`${this.nickname} ест`);
+		}
+		this.say = function() {
+			console.log('Неизвестное животное молчит');
+		},
+		this.rename = function(nickname) {
+                const regexp = /^[А-Я]([а-яА-Я]|-| )+$/g;
+                if ( regexp.test(nickname) ) {
+                    this.nickname = nickname;
+                } else {
+                    console.log('Новая кличка должна содержать только кирилические символы, пробелы или символ "-".');
+                }
+            }
+	}
+	function Cat(nickname) {
+		Pet.call(this,nickname);
+		this.say = function() {
+			console.log(`Кот ${this.nickname} молчит`);
+		}
+		this.hunt = function() {
+			console.log(`Кот ${this.nickname} охотится`);
+		}
+	}
+	function Dog(nickname) {
+		Pet.call(this,nickname);
+		this.say = function() {
+			console.log(`Собака ${this.nickname} молчит`);
+		}
+	}
+	function Parrot(nickname) {
+		Pet.call(this,nickname);
+		this.say = function() {
+			console.log(`Попугай ${this.nickname} молчит`);
+		}
+	}
+	function setDefineProperty(obj) {
+		for (let key in obj) {
+			if ((typeof obj[key])=="function") {
+				Object.defineProperty(obj, key, {
+					enumerable: false,
+					configurable: false,
+					writable: false
+				});
+			}
+			Object.defineProperty(obj, key, {
+				configurable: false,
+			})
+		}
+	}
+
+	const cat = new Cat('Васкин');
+	const dog = new Dog('Рекс');
+	const parrot = new Parrot('Инокентий');
+	setDefineProperty(cat);
+	setDefineProperty(dog);
+	setDefineProperty(parrot);
+	console.log(Object.getOwnPropertyDescriptor(cat, 'hunt'));
+	cat.hunt();
+	dog.eat();
+	dog.rename("К-9");
+	dog.rename("К-девять");
+	dog.say();
+	parrot.say();
+	*/
+	// реализация с помощью классов
+	class Pet {
+			constructor(nickname) {
+                this.nickname = nickname;
+            }
+
+            get nickname() {
+                return this._nickname;
+            }
+
+            set nickname(nickname) {
+                this._nickname = nickname;
+            }
+			eat() {
+				console.log(`${this.nickname} ест`);
+			}
+			say() {
+				console.log('Неизвестное животное молчит');
+			}
+			rename(nickname) {
+                const regexp = /^[А-Я]([а-яА-Я]|-| )+$/g;
+                if ( regexp.test(nickname) ) {
+                    this.nickname = nickname;
+                } else {
+                    console.log('Новая кличка должна содержать только кирилические символы, пробелы или символ "-".');
+                }
+			}
+	}
+	class Cat extends Pet {
+		constructor(nickname) {
+			super(nickname);
+		}
+		say() {
+				console.log(`Кот ${this.nickname} молчит`);
+			}
+		hunt() {
+			console.log(`Кот ${this.nickname} охотится`);
+		}
+	}
+	class Dog extends Pet {
+		constructor(nickname) {
+			super(nickname);
+		}
+		say() {
+				console.log(`Собака ${this.nickname} молчит`);
+			}
+	}
+	class Parrot extends Pet {
+		constructor(nickname) {
+			super(nickname);
+		}
+		say() {
+				console.log(`Попугай ${this.nickname} молчит`);
+			}
+	}
+	function setDefineProperty(obj) {
+		for (let key in obj) {
+			if ((typeof obj[key])=="function") {
+				Object.defineProperty(obj, key, {
+					enumerable: false,
+					configurable: false,
+					writable: false
+				});
+			}
+			Object.defineProperty(obj, key, {
+				configurable: false,
+			})
+		}
+	}
+	const cat = new Cat('Васкин');
+	const dog = new Dog('Рекс');
+	const parrot = new Parrot('Инокентий');
+	setDefineProperty(cat);
+	setDefineProperty(dog);
+	setDefineProperty(parrot);
+	console.log(Object.getOwnPropertyDescriptor(cat, 'hunt'));
+	cat.hunt();
+	dog.eat();
+	dog.rename("К-9");
+	dog.rename("К-девять");
+	dog.say();
+	parrot.say();
+	</script>
+</body>
+</html>
