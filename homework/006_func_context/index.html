@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ №6</title>
+</head>
+<body>
+<script>
+	// 1 задание
+	/*
+	function getFib(n) {
+		return n <= 1 ? n : getFib(n - 1) + getFib(n - 2);
+	}
+	console.log( getFib(5) );
+	console.log( getFib(8) );
+	*/
+	// 2 задание
+	const getFib = (() =>  {
+		const cash = {};
+		//return n <= 1 ? n : getFib(n - 1) + getFib(n - 2);
+		return (a) => {
+			if(cash[a]) {
+				console.log('Значение взято из кэша');
+				return cash[a]
+			} else {
+				console.log('Рассчитываю значение')
+				const n = (a <= 1) ? a : getFib(a - 1) + getFib(a - 2);
+				cash[a] = n;
+				return n;
+
+			}
+		}
+	})();
+	console.log( getFib(5) );
+	console.log( getFib(5) );
+	</script>
+</body>
+</html>
