@@ -5,7 +5,7 @@
     <title>ДЗ №6</title>
 </head>
 <body>
-<script>
+    <script>
 	// 1 задание
 	/*
 	function getFib(n) {
@@ -15,9 +15,9 @@
 	console.log( getFib(8) );
 	*/
 	// 2 задание
+	/*
 	const getFib = (() =>  {
 		const cash = {};
-		//return n <= 1 ? n : getFib(n - 1) + getFib(n - 2);
 		return (a) => {
 			if(cash[a]) {
 				console.log('Значение взято из кэша');
@@ -30,9 +30,48 @@
 
 			}
 		}
+
 	})();
 	console.log( getFib(5) );
 	console.log( getFib(5) );
+	*/
+	//3 задание
+	const getObj = (() =>  {
+		return (arr) => {
+			const obj = {};
+			for (let [key, value] of arr) {
+				if (Array.isArray(value)) {
+					obj[key]=getObj(value);//рекурсия
+					//obj[key] = Object.fromEntries([value]); // без рекурсии
+				} else {
+					obj[key]=value;
+				}
+			}
+				return obj;
+		}
+	})();
+
+	const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] , ['2', [
+	                                                            ['c','f']
+	                                                         ]
+	                                                   ]
+	            ];
+	const arr2 = [
+            ['name', 'Anna'],
+            ['age', '22'],
+            ['pets',
+                [
+                    ['dog', 'Faust'],
+                    ['cat', [
+						['dog', 'Faust'],
+						['cat', 'Balthazar']
+							]
+					]
+                ]
+            ]
+        ]
+	console.log(getObj(arr));
+	console.log(getObj(arr2));
 	</script>
 </body>
 </html>
