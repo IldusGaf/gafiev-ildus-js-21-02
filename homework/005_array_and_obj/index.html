@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5 ДЗ</title>
+</head>
+<body>
+<script>
+	let arr = ["Яблоко", "Гр1уша", "Апельсин", "Мандарин", "Виноград","Апельсин", "Мандарин"];
+	// 1 задание
+	/*
+
+	function unique (arr) {
+		let result = [];
+		for (let str of arr) {
+			if (!result.includes(str)) {
+			  result.push(str);
+			}
+		}
+		return result;
+	}
+	console.log(unique (arr));
+	// а наверно правильнее
+	function uniqueTwo(arr) {
+		return Array.from(new Set(arr));
+	}
+	arr = uniqueTwo(arr);
+	console.log(arr);
+	*/
+	// 2 задание
+	/*
+	function reverse(array) {
+	  let output = [];
+	  while (array.length) {
+		output.push(array.pop());
+	  }
+	  return output;
+	}
+	console.log(reverse(arr));
+	*/
+	//3 задание
+	/*
+	var entries = [
+	  ['dfd', 'iDEBIT'],
+	  ['tee', '17.64'],
+	  ['txrnId', '20181'],
+	  ['txnType', 'wet'],
+	  ['txnDate', 'werwf'],
+	  ['rsse', '0'],
+	  ['fghode', '0'],
+	  ['atrhode', ''],
+	  ['acertee', '0'],
+	  ['mehrge', ''],
+	  ['isCohfsete', 'true'],
+	  ['isTifhmeout', 'false']
+	];
+	var obj = Object.fromEntries(entries);
+	console.log(obj);
+	*/
+	// 4 задание
+	/*
+	function sumValue(obj) {
+	  let sum = 0;
+	  for (let value of Object.values(obj)) {
+		if (typeof(value)=="number"){
+			sum += value;
+		}
+	  }
+
+	  return sum;
+	}
+	let salaries = {
+	  "John": 100,
+	  "Pete": 300,
+	  "Mary": "250$",
+	  "Deere": "50$",
+	};
+	alert( sumValue(salaries) );
+	*/
+	//5 задание
+	/*
+	function average(nums) {
+		return nums.reduce((sum, current) => (sum + current))/ nums.length;
+	}
+	alert(average([1,2,3,4,5,6,7,8,9]));
+	*/
+	//6 задание
+	/*
+	function Calculator() {
+		this.current = 0;
+		this.sum = function(val) {
+			this.current += val;
+		};
+		this.mul = function(val) {
+			this.current *= val;
+		};
+		this.div = function(val) {
+			this.current /= val;
+		};
+		this.sub = function(val) {
+			this.current -= val;
+		};
+		this.clear = function() {
+            this.current = 0;
+        }
+		this.act = function(val, oper){
+				switch(oper) {
+                    case '+':
+                        this.sum(val);
+                        break;
+                    case '-':
+                        this.sub(val);
+                        break;
+                    case '*':
+                        this.mul(val);
+                        break;
+                    case '/':
+                        this.div(val);
+                }
+		}
+
+	}
+	let calculator = new Calculator();
+	calculator.act(100, '-');
+	alert( ` Результат операции равен ${calculator.current}`);
+	calculator.clear();
+	alert( ` Результат операции равен ${calculator.current}`);
+	*/
+	// 7 задание
+	/*
+	function makeObject(arr) {
+        let obj = {
+            numbers: [],
+            strings: [],
+            objects: []
+        };
+        for (let elem of arr) {
+            if (typeof elem == 'number') {
+                obj.numbers.push(elem);
+            } else if (typeof elem == 'string') {
+                obj.strings.push(elem);
+            } else if (typeof elem == 'object') {
+                obj.objects.push(elem);
+            }
+        }
+        return obj;
+    }
+        const array = [1,3, 'sdff','dffrty',{} ,-6,3452,'  ', {name: 'John', login: "qwass"}];
+        console.log(makeObject(array));
+	*/
+	//8 задание
+	/*
+	function range(arr, a, b) {
+		let result = [];
+			arr.forEach((item, index) => {
+				if ((a<=item && item<=b)||(b<=item && item<=a)) {
+					result.push(item);
+				}
+			})
+		return result;
+	}
+    const array = [-1,1,2,3,4,5,6,7,8,9];
+	console.log(range(array, 3, -4));
+	*/
+	//9 задание
+	/*
+	function sort(str) {
+		return str.replace(/\s+/g, '').toLowerCase().split('').sort().join('');
+	}
+	function isAnagram(original, test) {
+		return sort(original) === sort(test) ? true : false;
+	}
+	console.log(isAnagram("банка","кабан"));
+	console.log(isAnagram("слот ","стол"));
+	console.log(isAnagram("ива","ава"));
+	*/
+	//10 задание
+	/*
+	const obj = {
+            banana: 1,
+			orange: 2,
+			meat: 4,
+			words: ['banasa', 'asds', 'asds'],
+            showItem() {
+                let str = '';
+                for (let [key, value] of Object.entries(this)) {
+					if (!((this[key] instanceof Array) || (this[key] instanceof Object))) {
+						str += `${key}: ${value},`;
+					}
+                }
+                //str = str.replace(/,$/,'');
+				return str;
+            }
+        }
+        console.log(obj.showItem());
+	*/
+	//11 задание
+	 function ModifyObj() {
+            this.setProps = function(name, val, obj) {
+                Object.defineProperty(this, name, {
+                    value: val,
+                    writable: ( obj.hasOwnProperty('writable') ) ? obj['writable'] : true,
+                    configurable: ( obj.hasOwnProperty('configurable') ) ? obj['configurable'] : true,
+                    enumerable: ( obj.hasOwnProperty('enumerable') ) ? obj['enumerable'] : true
+                })
+            };
+        }
+        let testObj = new ModifyObj();
+		testObj.setProps('a', '1', {writable: true, configurable: true, enumerable: false});
+        testObj.setProps('b', '2', {});
+        testObj.setProps('c', '3', {writable: false, configurable: true, enumerable: false});
+        testObj.setProps('d', '4', {writable: false});
+        console.log(Object.getOwnPropertyDescriptors(testObj));
+	</script>
+</body>
+</html>
