@@ -1,0 +1,31 @@
+table {
+    font-size: .9rem;
+    overflow: auto;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+table td,th {
+    border: 1px solid #a4a4a4;
+    text-align: left;
+}
+.firstStyle {
+    background-color: blue;
+    color:white;
+}
+.secondStyle {
+    background-color: black;
+    color:gray;
+}
+.thirdStyle {
+    background-color: green;
+    color:red;
+}
+.buttonDelete {
+    visibility: hidden;
+}
+.buttonDelete: hover {
+    visibility: visible;
+}
+.registration-form  {
+    padding: 5px;
+}
