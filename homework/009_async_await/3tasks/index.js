@@ -1,5 +1,5 @@
 import {swapi} from './api/swapi.js' // Импорт из другого модуля
-import {objLinks} from './constants/swparams.js'
+//import {objLinks} from './constants/swparams.ts'
 import {printPeople} from './components/swapiComponents.js'
 
 const table = document.getElementById('table');
