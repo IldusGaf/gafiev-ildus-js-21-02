@@ -1,0 +1,14 @@
+.footer {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#666666;
+}
+.footer p {
+    margin: 0px 20px;
+}
+.footer__link {
+    text-decoration: none;
+    color: #666666;
+}

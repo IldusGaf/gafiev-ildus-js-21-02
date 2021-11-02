@@ -1,0 +1,16 @@
+.filter-item {
+    margin-left:10px;
+}
+.filter-item__header {
+    font-size:18.72px;
+}
+ul {
+    list-style-type:none;
+    padding:0px 0px 0px 20px;
+    margin: 0px;
+}
+@media (max-width: 520px) {
+    .sidebar {
+        display: none;
+    }
+}

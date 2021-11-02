@@ -1,0 +1,39 @@
+.product-list__block{
+    display: flex;
+    height:110px;
+    width:240px;
+    padding: 5px;
+    margin:0px 10px 10px 0px;
+}
+.product-list__block:hover {
+    animation: changeColor 1s forwards;
+}
+@keyframes changeColor {
+    0% {
+        background-color: rgb(242,242,242);
+    }
+    100% {
+        background-color: rgb(0,154,88);
+    }
+}
+figure {
+    margin:0px 10px 0px 0px;}
+img {
+    width:110px;
+    height:110px;
+}
+.product-list__caption {
+    background-color: rgba(242,242,242, 0);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.product-list__caption-button {
+    padding: 5px;
+    background-color: #cccccc;
+    border: none;
+    outline: none;
+}
+input {
+    margin-right: 10px;
+}
