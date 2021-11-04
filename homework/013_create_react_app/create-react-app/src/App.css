@@ -1,0 +1,19 @@
+.div, .footer, .sidebar   {
+  background-color: rgb(242,242,242);
+}
+.body {
+  font-family: Arial, Verdana, sans-serif;
+  display:grid;
+  grid-template-rows: auto 1fr 30px;
+  grid-template-columns: 240px 1fr;
+  grid-gap: 20px;
+}
+
+.sidebar-container {
+  width: 200px;
+}
+
+.content {
+  flex-grow: 1;
+  padding-left: 10px;
+}
