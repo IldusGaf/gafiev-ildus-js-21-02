@@ -1,0 +1,22 @@
+.add-block {
+    width: 600px;
+    height: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-block__input-container {
+    display: flex;
+}
+
+.input {
+    width: 400px;
+}
+
+.add-block__add-button {
+    padding: 0 5px;
+}
