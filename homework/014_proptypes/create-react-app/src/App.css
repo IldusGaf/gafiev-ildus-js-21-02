@@ -1,0 +1,10 @@
+.add-block, .task-block {
+  background-color: rgb(242,242,242);
+}
+.body {
+  font-family: Arial, Verdana, sans-serif;
+  display:grid;
+  grid-template-rows: auto 1fr 30px;
+  grid-template-columns: 240px 1fr;
+  grid-gap: 20px;
+}
