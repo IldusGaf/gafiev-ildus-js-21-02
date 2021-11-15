@@ -1,0 +1,14 @@
+.header {
+    padding: 20px 0px;
+}
+.header_dark{
+    color: white;
+}
+.header__text {
+    font-family: Arial;
+    font-size: 55px;
+}
+
+.header__text_dark {
+    color: white;
+}
