@@ -1,0 +1,22 @@
+.users-form__users {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pages__items {
+    display: flex;
+    gap: 2px;
+}
+
+.theme-changer {
+    width: 20px;
+    height: 20px;
+}

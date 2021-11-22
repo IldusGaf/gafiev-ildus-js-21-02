@@ -1,0 +1,13 @@
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.header_dark{
+    color: white;
+}
+.header__text_dark {
+    color: white;
+}
