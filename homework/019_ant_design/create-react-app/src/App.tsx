@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom';
 import './App.css';
 
-import { Layout } from 'antd';
 import ComponentWithHelper from './wrappers/ComponentWithHelper';
 import { ThemeContext, ThemeContextProvider } from './contexts/ThemeContext';
 import { Users } from './forms/Users/Users';
@@ -28,27 +27,25 @@ const App = () => {
             (context) => (
               <HashRouter>
                 <div className={`App ${context.darkTheme && ' App_dark'}`}>
-                  <Layout className="layout">
-                    <Header onClick={handleMenuClick} name={(pageType === 'users') ? 'Пользователи' : 'Регистрация'} />
-                    <div className="body">
-                      <div className="content">
-                        <ComponentWithHelper comment="Это форма пользователей">
-                          <Switch>
-                            <Route exact path={'/' /* Содержимое будет отрендерено, если соответствует начало пути */}>
-                              <Users />
-                            </Route>
-                            <Route path={'/user/:id' /* Содержимое будет отрендерено, если соответствует начало пути */}>
-                              <UserPage />
-                            </Route>
-                            <Route exact path={'/create' /* Содержимое будет отрендерено, если соответствует начало пути */}>
-                              <RegForm onClick={handleRegClick} />
-                            </Route>
+                  <Header onClick={handleMenuClick} name={(pageType === 'users') ? 'Пользователи' : 'Регистрация'} />
+                  <div className="body">
+                    <div className="content">
+                      <ComponentWithHelper comment="Это форма пользователей">
+                        <Switch>
+                          <Route exact path={'/' /* Содержимое будет отрендерено, если соответствует начало пути */}>
+                            <Users />
+                          </Route>
+                          <Route path={'/user/:id' /* Содержимое будет отрендерено, если соответствует начало пути */}>
+                            <UserPage />
+                          </Route>
+                          <Route exact path={'/create' /* Содержимое будет отрендерено, если соответствует начало пути */}>
+                            <RegForm onClick={handleRegClick} />
+                          </Route>
 
-                          </Switch>
-                        </ComponentWithHelper>
-                      </div>
+                        </Switch>
+                      </ComponentWithHelper>
                     </div>
-                  </Layout>
+                  </div>
                 </div>
               </HashRouter>
             )

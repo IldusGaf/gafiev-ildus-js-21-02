@@ -61,6 +61,7 @@ function createFetch(path: string, data: any, callback: any) {
     method: METHOD_POST,
     headers: new Headers({
       [APP_ID_FIELD]: APP_ID_VALUE,
+      'Content-Type': 'application/json',
     }),
     body: data,
   }).then((response) => response.json())

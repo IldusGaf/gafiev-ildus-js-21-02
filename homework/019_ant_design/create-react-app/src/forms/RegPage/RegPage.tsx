@@ -150,7 +150,7 @@ export const RegForm = (props: Props) => {
       <div className="footer">
         <button className="reg-button" type="button" onClick={() => handleRegButton(firstName, lastName, email, title, gender, phone)}>Отправить</button>
       </div>
-      {id && <Redirect to={`/${id}`} />}
+      {id && <Redirect to={`/user/${id}`} />}
     </div>
   );
 };
