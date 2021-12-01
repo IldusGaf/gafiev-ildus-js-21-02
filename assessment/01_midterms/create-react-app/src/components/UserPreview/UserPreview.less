@@ -1,0 +1,35 @@
+@size: 300px;
+@padding: 20px;
+@font-size: 20px;
+@radius: 20px;
+.img-sizes {
+    width: 100%;
+    height: 100%;
+}
+
+.user__container {
+    flex: 1 1 30%;
+    width: @size;
+    height: @size;
+    padding: @padding;
+    background: #ffff;
+    border-radius: @radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .user__picture {
+        width: 280px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        border-radius: @radius;
+
+        img {
+            .img-sizes;
+            border-radius: @radius;
+            object-fit: contain;
+        }
+    }
+}
