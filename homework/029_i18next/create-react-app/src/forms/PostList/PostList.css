@@ -1,0 +1,30 @@
+.page-sizes {
+  width: 100%;
+  height: 100%;
+}
+.loader__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posts__page {
+  width: 100%;
+  height: 100%;
+  padding: 5% 0;
+}
+.posts__page .posts__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.posts__page .posts__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+/*# sourceMappingURL=PostList.css.map */

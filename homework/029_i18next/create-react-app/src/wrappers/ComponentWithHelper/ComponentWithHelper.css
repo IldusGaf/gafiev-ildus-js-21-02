@@ -1,0 +1,14 @@
+.helper-wrapper {
+    position: relative;
+}
+
+.helper-wrapper__helper {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #6b7280;
+}

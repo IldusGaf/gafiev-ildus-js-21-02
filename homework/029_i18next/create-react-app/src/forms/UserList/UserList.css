@@ -1,0 +1,31 @@
+.page-sizes {
+  width: 100%;
+  height: 100%;
+}
+.loader__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.users__page {
+  width: 100%;
+  height: 100%;
+  padding: 5% 0;
+}
+.users__page .users__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.users__page .users__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+/*# sourceMappingURL=UserList.css.map */

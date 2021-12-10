@@ -1,0 +1,45 @@
+@form-padding: 10px 0;
+@border-radius: 20px;
+@bg-color: #ffffff;
+@bg-dark-color: #001529;
+
+.reg-form__page {
+    padding: @form-padding;
+
+    .reg-form__container {
+        width: 100%;
+        height: 70vh;
+        background: @bg-color;
+        border-radius: @border-radius;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        @media (max-width: 768px) {
+            height: 80vh;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .reg-form__auth {
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+
+    .reg-form_dark {
+        background: @bg-dark-color;
+        color: white;
+        label{
+            color: white;
+        }
+        h2 {
+            color: white;
+        }
+    }
+
+}
