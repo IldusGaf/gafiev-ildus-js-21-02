@@ -125,7 +125,7 @@ export default connect(
   (dispatch) => ({
     loadUserData: bindActionCreators(loadUserData, dispatch),
     loadUserPostList: bindActionCreators(loadUserPostList, dispatch),
-    ViewPost: bindActionCreators(openPost, dispatch),
+    openPost: bindActionCreators(openPost, dispatch),
     closePost: bindActionCreators(closePost, dispatch),
     openEditor: bindActionCreators(openEditor, dispatch),
     closeEditor: bindActionCreators(closeEditor, dispatch),
