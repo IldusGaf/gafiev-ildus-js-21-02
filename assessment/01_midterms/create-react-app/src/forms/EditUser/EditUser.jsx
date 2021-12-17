@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './EditUser.css';
 import { Upload, Button, Form, Input, Radio } from 'antd';
-
+import { useTranslation } from 'react-i18next';
+import '../../locale/i18next';
 import { UPLOAD_URL, UPLOAD_API_KEY } from '../../constants/imgbbApi';
 
 const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
@@ -12,7 +13,7 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
   const [picture, setPicture] = useState(user.picture);
   const [phone, setPhone] = useState(user.phone);
   const [upload, setUpload] = useState('');
-
+  const { t } = useTranslation();
   const uploadProps = {
     action: UPLOAD_URL,
     data: {
@@ -59,7 +60,7 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
   };
 
   const handleFailedValidation = () => {
-    alert('Ошибка заполнения формы! Введите корректные данные!');
+    alert(t('editUser.formValidate'));
   };
 
   return (
@@ -69,17 +70,17 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
       </figure>
       <div className="edit__img-buttons">
         <Upload {...uploadProps}>
-          <Button>Обновить фотографию</Button>
+          <Button>{t('editUser.btnUpdate')}</Button>
         </Upload>
-        <Button onClick={handlePhotoDelete}>Удалить фотографию</Button>
+        <Button onClick={handlePhotoDelete}>{t('editUser.btnDelete')}</Button>
       </div>
       <Form onFinish={handleSubmit} onFinishFailed={handleFailedValidation}>
         <Form.Item
           name="firstName"
-          label="Имя"
+          label={t('editUser.firstName')}
           rules={[
             {
-              message: 'Только латинские и русские буквы',
+              message: t('editUser.nameValidate'),
               pattern: /^[a-zA-Zа-яА-яёЁ]+$/,
             },
           ]}
@@ -88,31 +89,31 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
         </Form.Item>
         <Form.Item
           name="lastName"
-          label="Фамилия"
+          label={t('editUser.lastName')}
           rules={[
             {
-              message: 'Только латинские и русские буквы',
+              message: t('editUser.nameValidate'),
               pattern: /^[a-zA-Zа-яА-яёЁ]+$/,
             },
           ]}
         >
           <Input defaultValue={user.lastName} onChange={(event) => setLastName(event.target.value)} />
         </Form.Item>
-        <Form.Item name="gender" label="Пол">
+        <Form.Item name="gender" label={t('editUser.gender')}>
           <Radio.Group
             defaultValue={user.gender === 'male' ? 'male' : 'female'}
             onChange={(event) => setGender(event.target.value)}
           >
-            <Radio value="male">Мужской</Radio>
-            <Radio value="female">Женский</Radio>
+            <Radio value="male">{t('editUser.male')}</Radio>
+            <Radio value="female">{t('editUser.female')}</Radio>
           </Radio.Group>
         </Form.Item>
         <Form.Item
           name="dateOfBirth"
-          label="Дата рождения"
+          label={t('editUser.dateOfBirth')}
           rules={[
             {
-              message: 'Введите дату рождения в формате ГГГГ-ММ-ДД',
+              message: t('editUser.dateValidate'),
               pattern: /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/,
             },
           ]}
@@ -121,10 +122,10 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
         </Form.Item>
         <Form.Item
           name="phone"
-          label="Телефон"
+          label={t('editUser.phone')}
           rules={[
             {
-              message: 'Укажите корректный номер телефона',
+              message: t('editUser.phoneValidate'),
               pattern: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
             },
           ]}
@@ -133,7 +134,7 @@ const EditUser = ({ darkTheme, user, updateUserData, closeEditor }) => {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            Сохранить
+            {t('editUser.btnSubmit')}
           </Button>
         </Form.Item>
       </Form>

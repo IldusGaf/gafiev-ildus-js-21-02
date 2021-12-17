@@ -28,8 +28,10 @@ footer {
 }
 
 .content-wrapper {
+  height: 100%;
   width: 1200px;
   margin: 0 auto;
+  height: 100%;
 }
 
 a {
@@ -46,7 +48,7 @@ a {
   background: #001529;
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1025px) {
   .content-wrapper {
     width: 1024px;
   }

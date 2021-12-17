@@ -11,22 +11,26 @@ import UserCard from '../../components/UserCard/UserCard';
 import Post from '../../components/Post/Post';
 import ComponentForModal from '../../wrappers/ComponentForModal/ComponentForModal';
 import EditUser from '../EditUser/EditUser';
+import ViewPost from '../ViewPost/ViewPost';
 
 const User = ({
   darkTheme,
   user,
   userDataLoading,
   posts,
+  post,
   total,
   userPostsLoading,
   authUser,
   loadUserData,
   loadUserPostList,
   openPost,
+  closePost,
   editorOpened,
   openEditor,
   closeEditor,
   updateUserData,
+  isOpen,
 }) => {
   const [current, setCurrent] = useState(0);
   const [pageSize, setPageSize] = useState(6);
@@ -46,7 +50,9 @@ const User = ({
   const openModal = (post) => {
     openPost(post);
   };
-
+  const closeModal = () => {
+    closePost();
+  };
   return (
     <div className="user-form">
       {userDataLoading ? (
@@ -100,6 +106,21 @@ const User = ({
           </div>
         </div>
       )}
+      <ComponentForModal isOpen={isOpen} closeModal={closeModal}>
+        {isOpen && (
+          <ViewPost
+            id={post.id}
+            avatar={post.owner.picture}
+            ownerId={post.owner.id}
+            title={post.owner.title}
+            firstName={post.owner.firstName}
+            lastName={post.owner.lastName}
+            publishDate={post.publishDate}
+            picture={post.image}
+            text={post.text}
+          />
+        )}
+      </ComponentForModal>
       <ComponentForModal isOpen={editorOpened} closeModal={closeEditor}>
         {editorOpened && (
           <EditUser darkTheme={darkTheme} user={user} updateUserData={updateUserData} closeEditor={closeEditor} />
