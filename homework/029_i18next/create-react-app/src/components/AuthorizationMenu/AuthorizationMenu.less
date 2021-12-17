@@ -1,0 +1,25 @@
+@font-size: 16px;
+
+.auth-menu {
+    display: flex;
+    font-size: @font-size;
+
+    .auth-menu__first {
+        border-right: 1px solid #e9e9e9;
+    }
+
+    .auth-menu__first, .auth-menu__second {
+        padding: 0 10px;
+    }
+}
+
+.user {
+    display:flex;
+    gap: 3px;
+
+    @media (max-width: 768px) {
+        .name {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/state-in-constructor": "off",
+        //"prettier/prettier": "warn",
+        "react/function-component-definition": "off",
+        "no-undef": "off",
+        "func-names": "off",
+        "no-unused-vars": "off",
+        "no-param-reassign": "off",
+        "default-param-last": "off",
+        "import/prefer-default-export": "off",
+        "no-return-await": "off",
+        "react/prop-types": "off",
+        "no-alert": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/order": "off",
+        "react/destructuring-assignment": "off",
+        "react/self-closing-comp": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/no-unknown-property": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/button-has-type": "off",
+        "react/jsx-curly-brace-presence": "off",
+        "object-shorthand": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-useless-escape": "off",
+        "import/no-duplicates": "off",
+        "no-shadow": "off",
+        "jsx-a11y/mouse-events-have-key-events": "off",
+        "react/no-array-index-key": "off"
+    }
+}
