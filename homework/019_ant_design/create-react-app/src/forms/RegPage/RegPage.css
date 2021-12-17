@@ -1,0 +1,18 @@
+.reg-page {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    gap: 20px;
+}
+
+.footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reg-button {
+    width: 150px;
+}

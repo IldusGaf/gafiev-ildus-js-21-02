@@ -1,0 +1,15 @@
+.App {
+  background: #e7e8e6;
+}
+.body {
+  display: flex;
+  padding: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+.App_dark {
+  background: #666671;
+}

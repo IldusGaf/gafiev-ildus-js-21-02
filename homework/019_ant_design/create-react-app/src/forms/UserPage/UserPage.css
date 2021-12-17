@@ -1,0 +1,7 @@
+.user-page_form {
+    height: 1000px;
+}
+.user-page_card {
+    display: flex;
+    flex-direction: column;
+}
