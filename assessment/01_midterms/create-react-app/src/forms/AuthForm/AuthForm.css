@@ -1,0 +1,52 @@
+.common_props {
+  width: 300px;
+  margin-bottom: 10px;
+}
+.auth-form__page {
+  padding: 10px 0;
+}
+.auth-form__page .auth-form {
+  width: 100%;
+  height: 70vh;
+  background: #ffffff;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.auth-form__page .auth-form h2 {
+  text-align: center;
+  width: 300px;
+  margin-bottom: 10px;
+  color: inherit;
+}
+.auth-form__page .auth-form .auth-form__label {
+  width: 300px;
+  margin-bottom: 10px;
+}
+.auth-form__page .auth-form input,
+.auth-form__page .auth-form button {
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.auth-form__page .auth-form button {
+  color: #ffff;
+  background: black;
+}
+.auth-form__page .auth-form .auth-form__button_dark {
+  background: #1890ff;
+}
+.auth-form__page .auth-form .auth-form__reg {
+  width: 300px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+.auth-form__page .auth-form_dark {
+  background: #001529;
+  color: #ffffff;
+}
+/*# sourceMappingURL=AuthForm.css.map */

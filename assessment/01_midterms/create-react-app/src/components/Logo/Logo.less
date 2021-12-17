@@ -1,0 +1,23 @@
+@gap-size: 10px;
+@logo-font-size: 25px;
+@logo-icon-size: 25px;
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //gap: @gap-size;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    h1 {
+        font-size: @logo-font-size;
+        margin-bottom: 0;
+    }
+
+    .h1_dark {
+        color: #ffff;
+    }
+}
