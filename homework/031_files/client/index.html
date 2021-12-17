@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+</head>
+<body>
+    <input type="text" id="input" disabled style="width: 100%">
+    <div>
+        <button type="button" id="post" disabled>POST</button>
+    </div>
+</body>
+<script>
+    const URL = 'http://127.0.0.1:3000/api/files';
+    const METHOD = {
+        get: 'GET',
+        post: 'POST',
+    };
+    const input = document.getElementById('input');
+    const postButton = document.getElementById('post');
+    const sendRequest = () => {
+    fetch(URL, {
+        method: METHOD.get
+    })
+        .then(response => response.text())
+        .then(response => {
+            input.value = response;
+            input.disabled = false;
+            postButton.disabled = false;
+        })
+        .catch(error => alert(error));
+    }
+    const sendRequestWith = () => {
+      fetch(URL, {
+          method: METHOD.post,
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(
+            {text: input.value}
+        )
+      })
+    }
+    postButton.addEventListener('click', () => sendRequestWith());
+    sendRequest();
+</script>
+</html>

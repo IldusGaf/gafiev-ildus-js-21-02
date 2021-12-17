@@ -1,0 +1,35 @@
+20:41:18.423 INFO  b24ce438-9fcf-4d6c-8ebc-9c797c2b29e8 [fileService.createRecord] INPUT PARAMS body={"text":"First record"} 
+20:41:38.961 INFO  dc055a4b-ac6d-41e2-928c-00e172d2ac55 [fileService.createRecord] INPUT PARAMS body={"text":" First record"} 
+20:41:38.972 FATAL dc055a4b-ac6d-41e2-928c-00e172d2ac55 ENOENT: no such file or directory, open './dir/file'
+{"errno":-4058,"syscall":"open","code":"ENOENT","path":"./dir/file"}
+Error: ENOENT: no such file or directory, open './dir/file'
+    at Object.openSync (fs.js:498:3)
+    at Object.writeFileSync (fs.js:1524:35)
+    at Object.appendFileSync (fs.js:1563:6)
+    at FileRepository.postCreateRecord (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\src\repositories\fileRepository.js:35:12)
+    at createRecord (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\src\services\fileService.js:21:20)
+    at Layer.handle [as handle_request] (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ildus.Gafiev\IdeaProjects\gafiev-ildus-js-21-02\homework\031_files\server\node_modules\express\lib\router\index.js:281:22 
+20:42:13.403 INFO  52ac1c6d-6367-4321-92d5-52c7e3fe9e82 [fileService.getFileText] NO INPUT PARAMS 
+20:42:13.404 INFO  52ac1c6d-6367-4321-92d5-52c7e3fe9e82 [fileRepository.getFileText] invoke getFileText 
+20:42:13.406 INFO  52ac1c6d-6367-4321-92d5-52c7e3fe9e82 [fileService.getFileText] success status=200 response=undefined 
+20:42:13.406 INFO  52ac1c6d-6367-4321-92d5-52c7e3fe9e82 [fileRepository.getFileText] invoke getFileText 
+20:42:13.429 INFO  52ac1c6d-6367-4321-92d5-52c7e3fe9e82 [fileRepository.getFileText.makeDirAndFile] file created 
+20:42:29.578 INFO  83b55dc6-b488-408b-9da5-9b8a215990f5 [fileService.createRecord] INPUT PARAMS body={"text":"First"} 
+20:42:34.507 INFO  8bed4ffa-a4f1-42a3-bbe8-7ad231fa9b11 [fileService.createRecord] INPUT PARAMS body={"text":" second"} 
+20:42:44.724 INFO  aac2fcc7-f65e-4732-9d72-d74dafb2dc4f [fileService.createRecord] INPUT PARAMS body={"text":" третий внезапно"} 
+20:42:51.609 INFO  d37de7e5-a758-4967-91ac-eac669cb19f8 [fileService.getFileText] NO INPUT PARAMS 
+20:42:51.609 INFO  d37de7e5-a758-4967-91ac-eac669cb19f8 [fileRepository.getFileText] invoke getFileText 
+20:42:51.610 INFO  d37de7e5-a758-4967-91ac-eac669cb19f8 [fileService.getFileText] success status=200 response=First second третий внезапно 
+20:42:51.610 INFO  d37de7e5-a758-4967-91ac-eac669cb19f8 [fileRepository.getFileText] invoke getFileText 
+20:55:01.141 INFO  45625322-ccb1-4b3d-984a-748d9d74b336 [fileService.getFileText] NO INPUT PARAMS 
+20:55:01.141 INFO  45625322-ccb1-4b3d-984a-748d9d74b336 [fileRepository.getFileText] invoke getFileText 
+20:55:01.143 INFO  45625322-ccb1-4b3d-984a-748d9d74b336 [fileService.getFileText] success status=200 response=First second третий внезапно 
+20:55:01.144 INFO  45625322-ccb1-4b3d-984a-748d9d74b336 [fileRepository.getFileText] invoke getFileText 
+20:55:06.336 INFO  d7de2a9b-160b-4443-8f6c-72a075677bfb [fileService.getFileText] NO INPUT PARAMS 
+20:55:06.337 INFO  d7de2a9b-160b-4443-8f6c-72a075677bfb [fileRepository.getFileText] invoke getFileText 
+20:55:06.338 INFO  d7de2a9b-160b-4443-8f6c-72a075677bfb [fileService.getFileText] success status=200 response=First second третий внезапно 
+20:55:06.338 INFO  d7de2a9b-160b-4443-8f6c-72a075677bfb [fileRepository.getFileText] invoke getFileText 
