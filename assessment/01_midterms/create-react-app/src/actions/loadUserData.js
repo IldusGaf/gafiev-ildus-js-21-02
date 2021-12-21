@@ -1,4 +1,4 @@
-import { getUserDataApi, getPostListByUserApi, updateUserApi } from '../api/dummyApi';
+import { getUserDataApi, getPostListByUserApi, updateUserApi } from '../api/dummyProxy';
 
 const showUserLoadingAction = () => ({
   type: 'USER/SHOW_LOADING',
