@@ -52,6 +52,7 @@
         "import/no-duplicates": "off",
         "no-shadow": "off",
         "jsx-a11y/mouse-events-have-key-events": "off",
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "no-unused-expressions": "off"
     }
 }

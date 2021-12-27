@@ -1,4 +1,4 @@
-import { getCommentsApi } from '../api/dummyApi';
+import { getCommentsApi } from '../api/dummyProxy';
 
 const showLoadingAction = () => ({
   type: 'OPEN_POST/SHOW_LOADING',
