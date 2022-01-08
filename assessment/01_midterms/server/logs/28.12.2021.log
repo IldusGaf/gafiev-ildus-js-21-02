@@ -1,0 +1,60 @@
+11:01:52.342 INFO   [UsersActions.updateUser] invoked dummyApi.updateUser user id=123 updated data={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+11:01:52.347 ERROR  [UsersActions.addUser] error=Api error 
+11:04:16.410 INFO   [UsersActions.addUser] invoked dummyApi.addUser new user={"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+11:04:16.412 INFO   [UsersActions.addUser] reply={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"1979-11-25T21:56:06.020Z","registerDate":"1979-11-25T21:56:06.020Z","updatedDate":"1979-11-25T21:56:06.020Z"} 
+11:04:16.413 INFO   [UsersActions.addUser] result={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979","registerDate":"26.11.1979","updatedDate":"26.11.1979"} 
+11:04:16.417 INFO   [UsersActions.addUser] invoked dummyApi.addUser new user={"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+11:04:16.418 ERROR  [UsersActions.addUser] error=Api error 
+11:12:31.821 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+11:12:31.822 INFO   [CommentsRepository.getComments] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+11:12:31.824 INFO   [CommentsRepository.getComments] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+11:12:31.828 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+11:12:31.828 ERROR  [CommentsRepository.getComments] error=Api error 
+11:14:06.361 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+11:14:06.361 INFO   [CommentsRepository.getComments] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+11:14:06.364 INFO   [CommentsRepository.getComments] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+11:14:06.368 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+11:14:06.368 ERROR  [CommentsRepository.getComments] error=Api error 
+11:14:33.176 INFO   [PostsRepository.getPostList] invoked dummyApi.getPostList 
+11:14:33.177 INFO   [PostsRepository.getPostList] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+11:14:33.179 INFO   [PostsRepository.getPostList] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+11:14:33.183 INFO   [PostsRepository.getPostList] invoked dummyApi.getPostList 
+11:14:33.183 ERROR  [PostsRepository.getPostList] error=Api error 
+11:15:13.717 INFO   [UsersRepository.getUserList] invoked dummyApi.getUserList 
+11:15:13.718 INFO   [UsersRepository.getUserList] result={"data":[{"id":123,"firstName":"Vasya","lastName":"Pupkin"},{"id":456,"firstName":"Harley","lastName":"Davidson"}]} 
+11:15:13.722 INFO   [UsersRepository.getUserList] invoked dummyApi.getUserList 
+11:15:13.722 ERROR  [UsersRepository.getUserList] error=Api error 
+15:52:08.682 INFO   [PostsRepository.getPostList] invoked dummyApi.getPostList 
+15:52:08.835 INFO   [UsersRepository.getUserList] invoked dummyApi.getUserList 
+15:52:08.683 INFO   [PostsRepository.getPostList] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+15:52:08.835 INFO   [UsersRepository.getUserList] result={"data":[{"id":123,"firstName":"Vasya","lastName":"Pupkin"},{"id":456,"firstName":"Harley","lastName":"Davidson"}]} 
+15:52:08.687 INFO   [PostsRepository.getPostList] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+15:52:09.029 INFO   [UsersActions.addUser] invoked dummyApi.addUser new user={"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+15:52:08.690 INFO   [PostsRepository.getPostList] invoked dummyApi.getPostList 
+15:52:08.837 INFO   [UsersRepository.getUserList] invoked dummyApi.getUserList 
+15:52:08.690 ERROR  [PostsRepository.getPostList] error=Api error 
+15:52:08.837 ERROR  [UsersRepository.getUserList] error=Api error 
+15:52:08.692 INFO   [PostsRepository.getPostListByUser] invoked dummyApi.getPostListByUser 
+15:52:08.840 INFO   [UsersRepository.getUser] invoked dummyApi.getUser 
+15:52:08.693 INFO   [PostsRepository.getPostListByUser] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+15:52:08.840 INFO   [UsersRepository.getUser] reply={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"1979-11-25T21:56:06.020Z","registerDate":"1979-11-25T21:56:06.020Z","updatedDate":"1979-11-25T21:56:06.020Z"} 
+15:52:08.694 INFO   [PostsRepository.getPostListByUser] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+15:52:08.841 INFO   [UsersRepository.getUser] result={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979","registerDate":"26.11.1979","updatedDate":"26.11.1979"} 
+15:52:08.842 INFO   [UsersRepository.getUser] invoked dummyApi.getUser 
+15:52:08.696 INFO   [PostsRepository.getPostListByUser] invoked dummyApi.getPostListByUser 
+15:52:08.843 ERROR  [UsersRepository.getUser] error=Api error 
+15:52:08.696 ERROR  [PostsRepository.getPostListByUser] error=Api error 
+15:52:09.030 INFO   [UsersActions.addUser] reply={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"1979-11-25T21:56:06.020Z","registerDate":"1979-11-25T21:56:06.020Z","updatedDate":"1979-11-25T21:56:06.020Z"} 
+15:52:09.032 INFO   [UsersActions.addUser] result={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979","registerDate":"26.11.1979","updatedDate":"26.11.1979"} 
+15:52:09.034 INFO   [UsersActions.addUser] invoked dummyApi.addUser new user={"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+15:52:09.035 ERROR  [UsersActions.addUser] error=Api error 
+15:52:09.037 INFO   [UsersActions.updateUser] invoked dummyApi.updateUser user id=123 updated data={"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+15:52:09.038 INFO   [UsersActions.updateUser] reply={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"1979-11-25T21:56:06.020Z","registerDate":"1979-11-25T21:56:06.020Z","updatedDate":"1979-11-25T21:56:06.020Z"} 
+15:52:09.039 INFO   [UsersActions.updateUser] result={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979","registerDate":"26.11.1979","updatedDate":"26.11.1979"} 
+15:52:09.041 INFO   [UsersActions.updateUser] invoked dummyApi.updateUser user id=123 updated data={"id":123,"firstName":"Vasya","lastName":"Pupkin","dateOfBirth":"26.11.1979"} 
+15:52:09.041 ERROR  [UsersActions.addUser] error=Api error 
+15:52:09.417 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+15:52:09.417 INFO   [CommentsRepository.getComments] reply={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"2020-11-25T21:56:06.020Z","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"2020-05-24T14:53:17.598Z","owner":{"name":"Arnold"}}]} 
+15:52:09.418 INFO   [CommentsRepository.getComments] result={"data":[{"id":123,"text":"blah-blah-blah","publishDate":"26.11.2020","owner":{"name":"Vasya"}},{"id":456,"text":"blah-blah-blah","publishDate":"24.05.2020","owner":{"name":"Arnold"}}]} 
+15:52:09.420 INFO   [CommentsRepository.getComments] invoked dummyApi.getComments 
+15:52:09.420 ERROR  [CommentsRepository.getComments] error=Api error 

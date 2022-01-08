@@ -1,5 +1,5 @@
 module.exports = {
-    UsersActions: {
+    usersActions: {
         ADD_USER_INVOKE: '[UsersActions.addUser] invoked dummyApi.addUser new user={}',
         ADD_USER_REPLY_SUCCESS: '[UsersActions.addUser] reply={}',
         ADD_USER_REPLY_ERROR: '[UsersActions.addUser] error={}',

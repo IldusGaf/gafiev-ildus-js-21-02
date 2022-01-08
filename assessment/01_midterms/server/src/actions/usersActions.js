@@ -2,7 +2,7 @@ const api = require('../api/dummyApi');
 const userMapper = require('../mappers/usersMapper');
 const logger = require('../logger');
 const format = require('string-format');
-const { userActions: messages } = require('../constants/loggerMessages');
+const { usersActions: messages } = require('../constants/loggerMessages');
 
 class UsersActions {
     addUser(user) {

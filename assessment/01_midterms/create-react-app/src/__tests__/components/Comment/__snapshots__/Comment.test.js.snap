@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment component snapshot test 1`] = `
+<div
+  className="comment undefined"
+>
+  <Avatar
+    shape="circle"
+    size="default"
+  />
+  <div
+    className="comment__container"
+  >
+    <div
+      className="comment__header"
+    >
+      <ComponentWithHelper>
+        <div
+          className="comment__owner"
+        >
+          <Link
+            to="/users/undefined"
+          >
+            undefined undefined
+          </Link>
+        </div>
+      </ComponentWithHelper>
+      <div
+        className="comment__date"
+      />
+    </div>
+    <div
+      className="comment__text"
+    />
+  </div>
+</div>
+`;
