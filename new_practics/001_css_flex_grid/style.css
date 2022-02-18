@@ -1,0 +1,36 @@
+body {
+    font: 16px sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-columns: 240px 1fr;
+    grid-row-gap: 5px;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+body > header, main, aside, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    grid-area: header;
+    background-color: green;
+}
+.header__name-block {
+    color: white;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+    background-color: #d9d9d9;
+}
+footer {
+    grid-area: footer;
+    background-color: #d9d9d9;
+}
