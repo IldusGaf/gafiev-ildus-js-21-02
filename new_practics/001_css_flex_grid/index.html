@@ -1,18 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta name="viewport" content="widht=device-widht,initial-scale=1.0">
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
     <title>Не только красивое</title>
 </head>
 <body>
     <header class="header">
         <div class="header__name-block">
-            <span>Не только красивое</span>
+            <h1>Интернет магазин "Не только красивое"</h1>
         </div>
     </header>
-    <aside>Боковина</aside>
-    <main>СЕРЕДИНА</main>
-    <footer>КОНЕЦ</footer>
+    <aside class="sidebar">
+        <div class="filter">
+            <div class="filter__name-block">
+                <span>Морская рыба</span>
+            </div>
+            <ul class="filter__list">
+                <li class="filter__list-item">
+                    <input type="checkbox" id="shark" name="seaFish" value="1">
+                    <label for="shark">Акула</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="perch" name="seaFish" value="1">
+                    <label for="perch">Окунь</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="halibut" name="seaFish" value="1">
+                    <label for="halibut">Палтус</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="cod" name="seaFish" value="1">
+                    <label for="cod">Треска</label>
+                </li>
+            </ul>
+        </div>
+        <div class="filter">
+            <div class="filter__name-block">
+                <span>Пресноводная рыба</span>
+            </div>
+            <ul class="filter__list">
+                <li class="filter__list-item">
+                    <input type="checkbox" id="whiteEye" name="freshWaterFish" value="1">
+                    <label for="whiteEye">Белоглазка</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="sturgeon" name="freshWaterFish" value="1">
+                    <label for="sturgeon">Осётр</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="riverEel" name="freshWaterFish" value="1">
+                    <label for="riverEel">Речной угорь</label>
+                </li>
+                <li class="filter__list-item">
+                    <input type="checkbox" id="burBot" name="freshWaterFish" value="1">
+                    <label for="burBot">Налим</label>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="main__desc-block">
+            <h2>Рыбы на любой вкус</h2>
+            <span>Мы продаем рыбов, а не только показываем!</span>
+        </section>
+        <section class="category-block">
+            <div class="category-block__item">
+                <a class="category-block__link">Замороженные рыбы</a>
+                <span class="category-block__desc">Мы заморозили рыбов для вас</span>
+            </div>
+            <div class="category-block__item">
+                <a class="category-block__link">Живые рыбы</a>
+                <span class="category-block__desc">На кухню или разведение</span>
+            </div>
+        </section>
+        <section class="product">
+            <div class="product__name-block">
+                <h3>Популярные</h3>
+            </div>
+            <div class="product__list-block">
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/paltus.jpg" alt="Палтус">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Палтус</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/semga.jpg" alt="Сёмга">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Сёмга</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/paltus.jpg" alt="Палтус">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Палтус</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/semga.jpg" alt="Сёмга">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Сёмга</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/paltus.jpg" alt="Палтус">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Палтус</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/semga.jpg" alt="Сёмга">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Сёмга</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/paltus.jpg" alt="Палтус">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Палтус</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/semga.jpg" alt="Сёмга">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Сёмга</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+                <div class="product__list-block-item">
+                    <div class="product__list-block-item__pic">
+                        <img src="images/paltus.jpg" alt="Палтус">
+                    </div>
+                    <div class="product__list-block-item__info">
+                        <a class="product__list-block-item__link">Палтус</a>
+                        <button class="product__list-block-item__button">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a class="footer__link" href="#" >Контакты</a>
+        <span class="footer__desc">&copy; ИП Рыбов О.А.</span>
+    </footer>
 </body>
 </html>

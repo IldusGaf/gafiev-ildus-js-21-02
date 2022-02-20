@@ -1,0 +1,17 @@
+{
+  "name": "001_css_flex_grid",
+  "version": "1.0.0",
+  "description": "practice with less",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "Ild",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "less": "^4.1.2"
+  }
+}
