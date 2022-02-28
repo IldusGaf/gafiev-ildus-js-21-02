@@ -3,11 +3,17 @@
     background-color: darkcyan;
     height: 50px;
     width: 100%;
-    display: inherit;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 15px;
     margin-bottom: 15px;
 }
 .navbar__links {
     margin-left: auto;
+}
+
+.last-element {
+    height: 20px;
+    background-color: darkcyan;
 }
