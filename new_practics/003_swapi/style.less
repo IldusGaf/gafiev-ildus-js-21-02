@@ -1,0 +1,89 @@
+@backBlockColor: rgb(242,242,242);
+@deskColor: rgb(104,107,109);
+@backButtonColor: #84a8ef;
+@headerColor: cornflowerblue;
+@oddTrColor: #84a8ef;
+@textColor: #464646;
+
+.item-padding-margin {
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    font: 0.9rem sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 240px 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+body > header, main, aside, footer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    /*align-items: center;*/
+    padding: 5px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+    background-color: @headerColor;
+    &__name-block {
+        color: white;
+    }
+}
+
+.main {
+    grid-area: main;
+    background-color: inherit;
+    color: @textColor;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__desc-block {
+        padding: inherit;
+        margin-bottom: 10px;
+    }
+}
+
+table, th, td {
+    padding: 3px;
+    text-align: center;
+    table-layout: fixed;
+    //border-radius: 5px;
+}
+tbody tr:nth-child(odd) {
+    background-color: @oddTrColor;
+}
+.nav {
+    margin-top: 10px;
+}
+button{
+    background-color: @backButtonColor;
+    color: @textColor;
+    border: none;
+    padding:5px;
+}
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: @backBlockColor;
+    color: @deskColor;
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
