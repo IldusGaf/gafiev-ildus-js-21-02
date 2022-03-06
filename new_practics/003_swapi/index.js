@@ -11,14 +11,16 @@ const swApi = {
 const tbody = document.querySelector('tbody');
 const prevBtn = document.querySelector('.nav_prev');
 const nextBtn = document.querySelector('.nav_next');
+const sortBtn = document.querySelector('.nav_sort');
 
 const links = {
     previous: '',
     next:''
 };
+let sortToggle = false;
 
 const printResult = (obj) => {
-    const results = obj.results;
+    const results = sortToggle ? obj.results.sort((a,b)=>a.height-b.height): obj.results;
     results.forEach(key => {
         const tr = document.createElement('tr')
         tr.innerHTML = `<td>${key.name}</td> 
@@ -38,5 +40,8 @@ const toLink = (link) => {
 
 nextBtn.addEventListener('click',()=>toLink(links.next))
 prevBtn.addEventListener('click',()=>toLink(links.previous))
+sortBtn.addEventListener('click', ()=> {sortToggle=!sortToggle
+    toLink();
+})
 
 swApi.getMain(printResult);
