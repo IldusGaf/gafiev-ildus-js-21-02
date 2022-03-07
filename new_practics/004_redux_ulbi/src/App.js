@@ -36,6 +36,7 @@ function App() {
             <button onClick={()=>addCash(Number(prompt('Введите сумму;')))}>Пополнить</button>
             <button onClick={()=>addCustomer(prompt('Имя?'))}>Добавить клиента</button>
             <button onClick={()=>dispatch(fetchCustomers)}>Получить список клиентов</button>
+
         </div>
         {customers.length > 0 ?
             <div>
