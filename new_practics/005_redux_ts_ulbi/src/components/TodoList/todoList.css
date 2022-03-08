@@ -1,0 +1,12 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination__item {
+    border: 2px solid gray;
+    padding: 4px;
+}
+.pagination__item_active {
+    border: 2px solid lightseagreen;
+    padding: 4px;
+}
