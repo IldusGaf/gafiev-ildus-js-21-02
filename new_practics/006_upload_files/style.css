@@ -4,3 +4,12 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.gallery {
+    display: flex;
+}
+img {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
