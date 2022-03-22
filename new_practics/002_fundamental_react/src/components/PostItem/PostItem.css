@@ -1,0 +1,15 @@
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid lightseagreen;
+    padding: 10px;
+    margin: 10px;
+}
+.post__content {
+    display: flex;
+    flex-direction: column;
+}
+.post__btns {
+    display: flex;
+}
