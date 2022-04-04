@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-  background-color: #a3a5a8;
-  height: 100vh;
+  background-color: #d7d7d7;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .app_dark {
-  background-color: darkslategrey;
+  background-color: #888888;
 }
 
