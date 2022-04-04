@@ -1,0 +1,16 @@
+.user {
+    box-sizing: border-box;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+.user__img {
+    background-color: #686b6d;
+    height: 180px;
+    width: 180px;
+    margin-right: 10px;
+}
+
