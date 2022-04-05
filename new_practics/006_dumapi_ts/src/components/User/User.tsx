@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './User.css';
+import { UserType } from '../../types/dummyAPIResponses';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
-interface Props {
-  caption: string
-}
-const User = ({ caption }:Props) => (
-  <div className="user">
-    <div className="user__img" />
-    <div className="user__caption">
-      {caption}
+const User = ({
+  id, title, firstName, lastName, picture,
+}:UserType) => {
+  const themeContext = useContext(ThemeContext);
+  return (
+    <div className={`user ${themeContext.darkTheme && 'user_dark'}`}>
+      <img className="user__img" src={picture} alt="user_picture" />
+      <div className="user__caption">
+        {title} {firstName} {lastName} {id}
+      </div>
     </div>
-  </div>
-);
+
+  );
+};
 
 export default User;

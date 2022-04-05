@@ -15,10 +15,10 @@ export interface ThemeContextState {
 const ThemeContext = React.createContext<Partial<ThemeContextState>>({});
 
 const ThemeContextProvider = ({ children }: Props) => {
-  // @ts-ignore
   const [darkTheme, setDarkTheme] = useState(localStorage.getItem(DARK_THEME) === TRUE_STRING);
   const toggleTheme = (value: boolean) => {
     setDarkTheme(value);
+    localStorage.setItem(DARK_THEME,value.toString());
   };
 
   return (

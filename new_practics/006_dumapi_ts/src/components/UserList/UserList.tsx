@@ -1,14 +1,28 @@
 /* eslint-disable */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './UserList.css';
 import User from '../User/User';
+import {getUserList} from "../../api/dummyAPI";
+import {UserType} from "../../types/dummyAPIResponses";
+import ComponentWithHelper from "../../wrappers/ComponentWithHelper/ComponentWithHelper";
 
 const UserList = () => {
-  const arr = ['1, 2, 3, 4, 5', 'any1', 'any2', "any3", "any4", "any5"];
+  const [userList, setUserList] = useState([] as Array<UserType>);
+  const [page, setPage] = useState(0);
+  const [limit, setLimit] = useState(8);
+
+  useEffect(()=>{
+    getUserList(page, limit, (resp:Array<UserType>) => setUserList(resp),()=>console.log())
+  },[page])
   return (
     <div className={'userList'}>
-        {arr.map((elem,index) =>
-        <User caption={elem} key={index}/>
+        {userList.map((elem,index) =>
+            <ComponentWithHelper idComment={elem.id} key={index}>
+              <User title={elem.title}
+                    picture={elem.picture}
+                    firstName={elem.firstName}
+                    lastName={elem.lastName} />
+            </ComponentWithHelper>
         )}
     </div>
   );
