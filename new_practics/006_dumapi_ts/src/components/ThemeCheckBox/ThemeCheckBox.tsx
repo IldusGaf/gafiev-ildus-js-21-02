@@ -9,7 +9,11 @@ const ThemeCheckBox = () => {
         type="checkbox"
         className="theme-checkbox__input"
         checked={themeContext.darkTheme}
-        onChange={(event: ChangeEvent<HTMLInputElement>) => themeContext.toggleTheme && themeContext.toggleTheme(event.target.checked)}
+        onChange={
+            (event: ChangeEvent<HTMLInputElement>) => {
+              themeContext.toggleTheme && themeContext.toggleTheme(event.target.checked);
+            }
+}
       />
       <span>Темная тема</span>
     </div>
