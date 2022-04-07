@@ -9,6 +9,7 @@ export const getUserList = (
   limit: number,
   callback: (resp: UserListResponse) => void,
   errorCallback: (resp: any) => void,
+  finallyCallback: ()=> void,
 ) => {
   fetch(`${USER_URL}?${PAGE_FIELD}=${page}&${LIMIT_FIELD}=${limit}`, {
     method: METHOD_GET,
@@ -17,5 +18,6 @@ export const getUserList = (
     }),
   }).then((response) => response.json())
     .then((json: UserListResponse) => callback(json))
-    .catch(errorCallback);
+    .catch(errorCallback)
+    .finally(finallyCallback);
 };
