@@ -7,8 +7,9 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "@types/prop-types": "^15.7.4",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "antd": "^4.19.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
@@ -45,6 +46,8 @@
       "@typescript-eslint/no-unused-expressions": "off",
       "react/function-component-definition": "off",
       "react/jsx-no-constructed-context-values": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "max-len": [
         1,
         120
@@ -68,8 +71,8 @@
     "@types/react-dom": "^17.0.14",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^16.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
     "prop-types": "^15.8.1",
     "typescript": "^4.6.3"
   }

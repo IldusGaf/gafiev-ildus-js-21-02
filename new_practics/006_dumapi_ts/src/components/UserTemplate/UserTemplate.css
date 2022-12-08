@@ -1,4 +1,4 @@
-.user {
+.user-template {
     box-sizing: border-box;
     display: flex;
     background-color: white;
@@ -6,13 +6,13 @@
     margin: 10px 10px 0 0;
     padding: 10px;
 }
-.user__img {
+
+.user-template__img {
     height: 100px;
     width: 100px;
-    background-color: #686b6d;
     margin-right: 10px;
 }
 
-.user_dark {
+.user-template_dark {
     background-color: #bdbdbd;
 }
